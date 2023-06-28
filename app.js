@@ -4,6 +4,12 @@ import morgan from "morgan"
 import cors from "cors"
 import bodyParser from "body-parser"
 import { config } from "dotenv"
+const express = require("express")
+const { createClient } = require("@supabase/supabase-js")
+const morgan = require("morgan")
+const cors = require("cors")
+const bodyParser = require("body-parser")
+const { config } = require("dotenv")
 
 config()
 
@@ -64,4 +70,8 @@ app.get("*", (req, res) => {
   res.send("Catmash API")
 })
 
-export default app
+app.listen(3000, () => {
+  console.log(`> Ready on http://localhost:3000`)
+})
+
+module.exports = app

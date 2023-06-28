@@ -64,6 +64,4 @@ app.get("*", (req, res) => {
   res.send("Catmash API")
 })
 
-app.listen(3000, () => {
-  console.log(`> Ready on http://localhost:3000`)
-})
+export default app

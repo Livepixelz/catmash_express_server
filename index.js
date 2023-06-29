@@ -1,9 +1,9 @@
-const express = require("express")
-const { createClient } = require("@supabase/supabase-js")
-const morgan = require("morgan")
-const cors = require("cors")
-const bodyParser = require("body-parser")
-const { config } = require("dotenv")
+import express from "express"
+import { createClient } from "@supabase/supabase-js"
+import morgan from "morgan"
+import cors from "cors"
+import bodyParser from "body-parser"
+import { config } from "dotenv"
 
 config()
 
@@ -64,7 +64,7 @@ app.get("*", (req, res) => {
   res.send("Catmash API")
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(3000, () => {
   console.log(`> Ready on http://localhost:3000`)
 })
 

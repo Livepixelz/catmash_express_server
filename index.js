@@ -70,7 +70,7 @@ app.get("*", (req, res) => {
   res.send("Catmash API")
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`> Ready on http://localhost:3000`)
 })
 

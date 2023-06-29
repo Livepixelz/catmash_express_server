@@ -1,9 +1,3 @@
-import express from "express"
-import { createClient } from "@supabase/supabase-js"
-import morgan from "morgan"
-import cors from "cors"
-import bodyParser from "body-parser"
-import { config } from "dotenv"
 const express = require("express")
 const { createClient } = require("@supabase/supabase-js")
 const morgan = require("morgan")
